@@ -4,22 +4,27 @@
     <head>
         <title>Booking system</title>
     </head>
+
     <body style=" background-color:mediumvioletred;">
         <h1 style= "text-align:center; color:white; margin-bottom:50px">Log in</h1>
         <img src="/static/raspberry-pi-foundation-logo.png" alt="logo" 
             style="height: 40px; position:absolute; top:10px">
 
-        <form action="/login" method="POST" style="width: 200px; margin: 20px auto; display: block;">
-            <input type="email" name="email" placeholder="Email Addess" required style="margin-bottom:20px; padding:10px; border-radius:10px"><br>
-            <input type="password" name="password" placeholder="Password" required style="margin-bottom:20px; padding:10px; border-radius:10px"><br>
+        <form id="login" style="width: 200px; margin: 20px auto; display: block;">
+            <input type="email" id="email" placeholder="Email Addess" required style="margin-bottom:20px; padding:10px; border-radius:10px"><br>
+            <input type="password" id="password" placeholder="Password" required style="margin-bottom:20px; padding:10px; border-radius:10px"><br>
             <button type="submit" style="display:block; margin:0 auto;">Log In</button>
         </form>
             
         <div style="text-align:center; margin-top:50px;">
             <p style="color:white">Don't have an account?
-                <button style="display:inline-block">Sign up</button>
+                
+                    <button style="display:inline-block">Sign up</button>
+                </a>
             </p>
         </div>
+
+        <script src="/static/login.js"></script>
     </body>
 
 

@@ -1,19 +1,39 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <title>Sign Up</title>
+    </head>
 
     <body>
-        <h1>SIGN UP</h1>
+        
+        
+        <img src="/static/raspberry-pi-foundation-logo.png" alt="logo"
+            style=height:40px>
+            <h1 style="text-align:center">SIGN UP</h1>
 
-        <form action="/submit">
-            <input type="text" name="name" placeholder="Enter your name">
-            <input type="email" name="email" placeholder="Enter your email address">
+        <form id="signup">
+            <input type="text" id="fname" placeholder="First Name" required>
+            <input type="text" id="lname" placeholder="Last Name" required><br>
+            <input style="margin-top:20px; width: 335px;" type="email" id="email" placeholder="Email address" required><br>
+            <input style="margin-top:20px; width: 335px;" type="number" id="number" placeholder="Phone number"><br>
+            <input style="margin-top:20px; width: 335px;" type="password" id="password" placeholder="Password" required><br>
+
+            <button style="margin-top:20px" type="submit">Create Account</button>
         </form>
-    
-    </body>
-
 
 
     <div class="links">
-        <a href="index.html"><button>Sign up</button></a>
+        <a href="{{url_for('signup')}}"><button style="margin-top:20px">Sign up</button></a>
     </div>
+
+    <div>
+        <p>Already have an account?
+            <a href="{{url_for('login')}}">Log in</a>
+
+        </p>
+    </div>
+    <script src="/static/signup.js"></script>
+    </body>
+
 
 </html>
