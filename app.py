@@ -55,6 +55,9 @@ def login():
             
         else:
             return "User or Password does not exist"
+        
+    return render_template("login.html")
+        
     
 if __name__ == "__main__":
     app.run(debug=True)
