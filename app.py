@@ -51,7 +51,7 @@ def login():
         user = cursor.fetchone()
         
         if user is not None:
-             return render_template("homepage.html")
+             return render_template("events.html")
             
         else:
             return "User or Password does not exist"
