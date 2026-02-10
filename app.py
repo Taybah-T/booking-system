@@ -51,16 +51,20 @@ def login():
         user = cursor.fetchone()
         
         if user is not None:
-             return render_template("events.html")
+             return render_template("home.html")
             
         else:
-            return "User or Password does not exist"
+            return render_template("home.html")
         
     return render_template("login.html")
 
 @app.route("/home", methods=["GET"])
 def front_page():
     return render_template("home.html")
+
+@app.route("/about", methods=["GET"])
+def about_us():
+    return render_template("about.html")
     
 if __name__ == "__main__":
     app.run(debug=True)
