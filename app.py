@@ -57,7 +57,10 @@ def login():
             return "User or Password does not exist"
         
     return render_template("login.html")
-        
+
+@app.route("/home", methods=["GET"])
+def front_page():
+    return render_template("home.html")
     
 if __name__ == "__main__":
     app.run(debug=True)
