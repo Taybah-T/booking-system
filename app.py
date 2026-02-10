@@ -65,6 +65,10 @@ def front_page():
 @app.route("/about", methods=["GET"])
 def about_us():
     return render_template("about.html")
+
+@app.route("/event", methods=["GET"])
+def events():
+    return render_template("events.html")
     
 if __name__ == "__main__":
     app.run(debug=True)
