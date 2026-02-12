@@ -74,6 +74,10 @@ def events():
 def log_out():
     return redirect(url_for("login"))
 
+@app.route("/booking")
+def ur_bookings():
+    return render_template("booking.html")
+
 
     
 if __name__ == "__main__":
