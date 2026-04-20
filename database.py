@@ -1,18 +1,23 @@
 import sqlite3
 
-db = sqlite3.connect("database.db")
+conn = sqlite3.connect("database.db")
+cur = conn.cursor()
 
-db.execute("""
-CREATE TABLE users (
+cur.execute("""
+    CREATE TABLE IF NOT EXISTS Users (
+        UserID INTEGER PRIMARY KEY AUTOINCREMENT,
+        UserName TEXT NOT NULL,
+        Email TEXT UNIQUE NOT NULL,
+        Password TEXT NOT NULL)
+    """)
+
+cur.execute("""
+    CREATE TABLE IF NOT EXISTS bookings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    fname TEXT,
-    lname TEXT,
-    email TEXT UNIQUE,
-    password TEXT
-);
-""")
+    event_name TEXT NOT NULL,
+    event_date TEXT NOT NULL)
+    """)
 
-db.commit()
-db.close()
+
 
 print("Database created!")

@@ -1,1 +1,69 @@
-<h1>STILL DOING</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+    </head>
+
+    <body>
+    
+        <h1 style="
+        text-align:center;
+        background-color:rgb(112, 11, 53);
+        height: 70px;
+        line-height: 70px;
+        font:arial;
+        margin:0
+        ">
+        CoderDojo</h1>
+
+        <div
+            style="background-color:rgb(145, 17, 70); height:700px; width: 200px; float:left; padding:20px; margin:0">
+            <a href="/about">
+                <button style="margin-top:15px; width: 200px; height: 35px;">About us</button><br>
+            </a>
+
+            <a href="/events">
+                <button style ="margin-top:50px; width:200px; height:35px;">Upcoming events</button>
+            </a>
+
+            <a href="/bookings">
+                <button style="margin-top:50px; width:200px; height:35px; background-color:grey">Your bookings</button><br>
+            </a>
+
+            <a href="/feedback">
+                <button style="margin-top:350px; width:200px; height:35px">Feedback</button><br>
+            </a>
+
+            <a href="/logout">
+                <button style="margin-top:50px; width:200px; height:35px; color:red;font-size:large;font-weight:bold; border: 2px solid black">Log Out</button>
+            </a>
+        </div>
+
+        <!-- CREAM BLOCK ADDED HERE -->
+        <div style="margin-left:250px; margin-top:20px; padding:20px; background-color:#f5f0e6; width:70%; border:2px solid #d6c9b5;font-size:18px">
+
+            <h2 style="color: brown; margin: 0;">your bookings</h2>
+            <p style="color: grey; margin-top: 5px;">view and manage your bookings</p>
+
+            <table border="1" style="margin:auto; width:60%; text-align:center;">
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking["event_name"] }}</td>
+                    <td>{{ booking["event_date"] }}</td>
+                    <td>
+                        <a href="/delete-booking/{{ booking['id'] }}" style="color:red;">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+    </body>
+</html>

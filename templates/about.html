@@ -2,47 +2,75 @@
 <html>
     <head>
         <title>About us Page</title>
+
+        <style>
+            .home {
+                top: 20px;
+                left: 20px;
+                width: 55px;
+                height: 55px;
+                position: absolute;
+            }
+        </style>
     </head>
 
-    <h1 style="text-align:center">About Us</h1>
+    <body>
 
-        <a href="/home">
-            <button style="background-color:rgba(136, 32, 49, 0.792); color:white;">home</button>
-        </a>
+         <h1 style="
+        text-align:center;
+        background-color:rgb(112, 11, 53);
+        height: 70px;
+        line-height: 70px;
+        font:arial;
+        margin:0
+        ">About Us
 
-    <div style="text-align:center">
-        <img src="/static/coderdojo.png", alt="coderdojo"
-        style = "width: 250px;">
+            <a href="/events">
+                <img src="/static/home-button.webp" class="home">
+            </a>
+        </h1>
+     
 
-        <img src="/static/raspberryPi.png", alt="Pi"
-        style = "width: 150px;"><br>
-    </div>
+
+        <div style="text-align:center">
+            <img src="/static/coderdojo.png" alt="coderdojo" style="width: 250px;">
+            <img src="/static/raspberryPi.png" alt="Pi" style="width: 150px;"><br>
+        </div>
 
         <img src="/static/CoolestProjects_03072020-185-2048x1365.jpg" alt="students"
         style="width:450px; margin-top:50px">
 
-        <img src="/static/IMG_4303.jpg", alt="presentation"
+        <img src="/static/IMG_4303.jpg" alt="presentation"
         style="width:386px">
 
-        <img src="/static/OIP.webp", alt="little"
+        <img src="/static/OIP.webp" alt="little"
         style="width: 431px;">
 
-    </body>
+<div style="display: flex; height: 100vh; font-size:large; font-family:Arial">
 
-    <div style="display: flex; height: 100vh;font-size:large; font-family:Arial">
-
-        <div style="padding:20px; text-align:center">
-            <div class="centered">
-                <h3>What we do</h3>
-                <p>
-                    At CoderDojo clubs(Dojos) we offer a space for<br>
-                    young people to explore technology and coding<br>
-                    in a formal, creative, safe, and social<br>
-                    environment.
-                </p>
-            </div>
-            
+    <div style="padding:20px; text-align:center; width:50%;">
+        <div class="centered">
+            <h3>What we do</h3>
+            <p>
+                At CoderDojo clubs(Dojos) we offer a space for<br>
+                young people to explore technology and coding<br>
+                in a formal, creative, safe, and social<br>
+                environment.
+            </p>
         </div>
-        
     </div>
+
+    <div style="padding:20px; width:50%; text-align:center;">
+        <h3>Our morals</h3>
+        <p>
+            We believe everyone should have equal access to learn to code,<br>
+            therefore we pay attention to those who have accessibility issues.<br><br>
+            Diversity and equality at our sessions will always be<br>
+            our main priority.
+        </p>
+    </div>
+
+</div>
+
+    </body>
 </html>

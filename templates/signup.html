@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sign Up</title>
-    </head>
+<head>
+    <title>Sign Up</title>
+</head>
 
-    <body>
-        
-        
-        <img src="/static/raspberry-pi-foundation-logo.png" alt="logo"
-            style=height:40px>
-            <h1 style="text-align:center">SIGN UP</h1>
+<body>
 
-        <form id="signup">
-            <input type="text" id="fname" name="fname placeholder="First Name" required>
-            <input type="text" id="lname" name="lname" placeholder="Last Name" required><br>
-            <input style="margin-top:20px; width: 335px;" type="email" id="email" placeholder="Email address" required><br>
-            <input style="margin-top:20px; width: 335px;" type="number" id="number" placeholder="Phone number"><br>
-            <input style="margin-top:20px; width: 335px;" type="password" id="password" placeholder="Password" required><br>
+    <img src="/static/raspberry-pi-foundation-logo.png" alt="logo" style="height:40px">
 
-            <button style="margin-top:20px" type="submit">Create Account</button>
-        </form>
+    <h1 style="text-align:center">SIGN UP</h1>
 
 
-    <div class="links">
-        <a href="{{url_for('signup')}}"><button style="margin-top:20px">Sign up</button></a>
-    </div>
+    <form method="POST" action="/signup">
+
+        <input type="text" id="fname" name="name" placeholder="First Name" required>
+        <input type="text" id="lname" placeholder="Last Name" required><br>
+
+        <input style="margin-top:20px; width: 335px;" 
+            type="email" id="email" name="email" placeholder="Email address" required><br>
+
+        <input style="margin-top:20px; width: 335px;" 
+            type="password" id="password" name="password" placeholder="Password" required><br>
+
+        <button style="margin-top:20px" type="submit">Create Account</button>
+    </form>
+
 
     <div>
         <p>Already have an account?
-            <a href="{{url_for('login')}}">Log in</a>
-
+            <a href="/login">Log in</a>
         </p>
     </div>
-    <script src="/static/signup.js"></script>
-    </body>
 
-
+</body>
 </html>
